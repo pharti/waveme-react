@@ -3,6 +3,7 @@
   justify-content: center;
   width: 100%;
   margin-top: 64px;
+  position: "relative";
 }
 
 .dataContainer {
@@ -24,10 +25,56 @@
   margin-top: 16px;
 }
 
+.waveCountTitle {
+  color: gray;
+  margin-top: 16px;
+}
+.totalWaves {
+  color: gray;
+  margin-top: 16px;
+}
+
 .waveButton {
   cursor: pointer;
   margin-top: 16px;
   padding: 8px;
   border: 0;
   border-radius: 5px;
+}
+.loaderView {
+  display: "flex";
+  flex: 1;
+}
+
+.loader {
+  position: absolute;
+  left: 47%;
+  top: 35%;
+  z-index: 1000;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
