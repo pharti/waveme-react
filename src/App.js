@@ -13,7 +13,7 @@ import {
   Grid,
 } from "@mui/material";
 
-const contractAddress = "0x5F09132a5adb27F45299ea18729A2513640F75cE";
+const contractAddress = "0xf17868c8f8e4517fB776E85a9888b7C2Df0FeA60";
 const abi = contractABI.abi;
 const theme = createTheme({});
 export default function App() {
@@ -203,10 +203,9 @@ export default function App() {
         <div className="dataContainer">
           <Grid
             container
-            xs={10}
             alignItems="center"
             justifyContent="space-between"
-            style={{ paddingBottom: 20, paddingLeft: "10%" }}
+            style={{ paddingBottom: 20 }}
           >
             <Grid item>
               <Typography variant="h4">👋 Hey there!</Typography>
@@ -218,18 +217,18 @@ export default function App() {
             </Grid>
           </Grid>
 
-          <Grid xs={10} container alignItems="center" justifyContent="space-between" style={{ paddingLeft: "10%" }}>
-            <Grid item xs={9}>
+          <Grid container alignItems="center" justifyContent="space-between">
+            <Grid item>
               <TextField
                 id="outlined-basic"
                 label="Message"
                 variant="outlined"
-                style={{ width: '100%' }}
+                style={{ width: 300 }}
                 onChange={handleTextFieldChange}
                 inputRef={textInput}
               />
             </Grid>
-            <Grid xs={3} item>
+            <Grid item>
               <Button variant="contained" onClick={wave} style={{ height: 56 }}>
                 👋 Wave
               </Button>
@@ -239,7 +238,7 @@ export default function App() {
           {allWaves &&
             allWaves.map((wave, index) => {
               return (
-                <Grid container xs={10} style={{ paddingTop: 20, paddingLeft: "10%" }}>
+                <div style={{ paddingTop: 20 }}>
                   <Card variant="outlined">
                     <CardContent>
                       <Typography
@@ -261,7 +260,7 @@ export default function App() {
                       </Typography>
                     </CardContent>
                   </Card>
-                </Grid>
+                </div>
               );
             })}
         </div>
