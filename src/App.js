@@ -5,7 +5,7 @@ import contractABI from './utils/WavePortal.json'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Typography, Card, CardContent, Button, CardActions, TextField, Grid } from '@mui/material';
 
-const contractAddress = "0x7d796955C90DF44E3b0E43b91F420fa398621b6E";
+const contractAddress = "0xEC479ef4d88697983ECb57f8dD39B710fA494eba";
 const abi = contractABI.abi;
 const theme = createTheme({
 
