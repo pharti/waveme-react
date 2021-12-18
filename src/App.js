@@ -236,7 +236,7 @@ export default function App() {
           </Grid>
 
           {allWaves &&
-            allWaves.map((wave, index) => {
+            allWaves.reverse().map((wave, index) => {
               return (
                 <div style={{ paddingTop: 20 }}>
                   <Card variant="outlined">
